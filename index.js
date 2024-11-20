@@ -65,12 +65,9 @@ bot.on('message', msg => {
     if(text == "buttons"){
         bot.sendMessage(chatId, 'tugani tanglang', {
             reply_markup: {
+                resize_keyboard: true,
                 keyboard: [
                     [
-                        {
-                            text: 'Garden'
-    
-                        },
                         {
                             text: 'Kitchen'
                         },
@@ -79,13 +76,12 @@ bot.on('message', msg => {
     
                         },
                         {
-                            text: 'laptop '
+                            text: 'laptop ',
+                            request_contact: true 
     
-                        },
-                        {
-                            text: 'Garden'
-    
-                        },
+                        }
+                    ],
+                    [
                         {
                             text: 'Kitchen'
                         },
@@ -100,13 +96,31 @@ bot.on('message', msg => {
                         }
                     ]
                 ],
-                resize_keyboard: true
             }
         })
     }
-
-     
-
-
 })
+
+// bot.on('contact', msg => {
+//     const chatId = msg.chat.id;
+//     bot.sendMessage(chatId, "siz muvaffaqiyatli ro'yixatdan o'tdingiz");
+// })
+
+// bot.on('message', msg => {
+//     const chatId = msg.chat.id;
+//     const text = msg.text;
+
+//     bot.sendMessage(chatId, 'visit', {
+//         reply_markup:{
+//             resize_keyboard: true, 
+//             inline_keyboard: [
+//                 [{text: 'saytga havola', url: 'https://www.kun.uz'}]
+//             ]
+//         }
+//     })
+// })
+
+
+
+
 
